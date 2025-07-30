@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>loan-wise-portal</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management System - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Loan Management</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showDashboard()" class="nav-link active">Dashboard</a></li>
+                <li><a href="#" onclick="showPersonal()" class="nav-link">Personal Details</a></li>
+                <li><a href="#" onclick="showIncome()" class="nav-link">Income Details</a></li>
+                <li><a href="#" onclick="showProperty()" class="nav-link">Property Details</a></li>
+                <li><a href="#" onclick="showDocument()" class="nav-link">Document Upload</a></li>
+                <li><a href="#" onclick="showLoan()" class="nav-link">Loan Application</a></li>
+                <li><a href="#" onclick="logout()" class="nav-link">Logout</a></li>
+            </ul>
+        </nav>
 
-    <meta property="og:title" content="loan-wise-portal" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1 id="page-title">Dashboard</h1>
+                <div class="user-info">
+                    <span id="user-name">Welcome, User</span>
+                </div>
+            </header>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+            <!-- Content Area -->
+            <div id="content-area" class="content-area">
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Personal Details</h3>
+                        <p>Manage your personal information</p>
+                        <button onclick="showPersonal()" class="btn btn-primary">View Details</button>
+                    </div>
+                    <div class="card">
+                        <h3>Income Details</h3>
+                        <p>Add and manage income information</p>
+                        <button onclick="showIncome()" class="btn btn-primary">View Income</button>
+                    </div>
+                    <div class="card">
+                        <h3>Property Details</h3>
+                        <p>Manage property information</p>
+                        <button onclick="showProperty()" class="btn btn-primary">View Properties</button>
+                    </div>
+                    <div class="card">
+                        <h3>Documents</h3>
+                        <p>Upload and manage documents</p>
+                        <button onclick="showDocument()" class="btn btn-primary">Manage Documents</button>
+                    </div>
+                    <div class="card">
+                        <h3>Loan Application</h3>
+                        <p>Apply for a new loan</p>
+                        <button onclick="showLoan()" class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>
